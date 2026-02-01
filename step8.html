@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 8: Final Code & Next Steps</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .tutorial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 3em;
+            text-align: center;
+        }
+
+        .step-number {
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 40px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .code-container {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 30px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 30px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            line-height: 1.6;
+            position: relative;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .copy-btn:hover {
+            background: #5568d3;
+        }
+
+        .highlight {
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #28a745;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .highlight h3 {
+            color: #28a745;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .next-steps {
+            background: #fff3cd;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 30px 0;
+        }
+
+        .resources {
+            background: #e7f3ff;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #2196F3;
+            margin: 30px 0;
+        }
+
+        .resources a {
+            color: #2196F3;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .resources a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tutorial-container">
+        <div class="content">
+            <div style="text-align: center;">
+                <span class="step-number">✅ Complete!</span>
+            </div>
+            <h1>🎉 Congratulations!</h1>
+            <p style="text-align: center; font-size: 1.2em; color: #667eea; margin-bottom: 40px;">
+                You've successfully built a professional login page with HTML and CSS!
+            </p>
+
+            <div class="highlight">
+                <h3>📄 Complete Code</h3>
+                <p>Copy the code below and save it as <strong>login.html</strong> to use in your own projects!</p>
+            </div>
+
+            <div class="code-container">
+                <button class="copy-btn" onclick="copyCode()">📋 Copy Code</button>
+                <pre id="finalCode">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Login Page&lt;/title&gt;
+    &lt;style&gt;
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling with gradient background */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Login container styling */
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading styling */
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        /* Form group styling */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        /* Input field styling */
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        /* Input focus effect */
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* Button styling */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            transform: translateY(-2px);
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="login-container"&gt;
+        &lt;h2&gt;Welcome Back&lt;/h2&gt;
+        
+        &lt;form&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="username"&gt;Username&lt;/label&gt;
+                &lt;input type="text" id="username" placeholder="Enter username" required&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="form-group"&gt;
+                &lt;label for="password"&gt;Password&lt;/label&gt;
+                &lt;input type="password" id="password" placeholder="Enter password" required&gt;
+            &lt;/div&gt;
+            
+            &lt;button type="submit"&gt;Login&lt;/button&gt;
+        &lt;/form&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+            </div>
+
+            <h2>✅ What You've Learned</h2>
+            <ul>
+                <li><strong>HTML Structure</strong> - How to properly set up an HTML5 document</li>
+                <li><strong>Form Elements</strong> - Creating inputs, labels, and buttons</li>
+                <li><strong>CSS Reset</strong> - Removing browser defaults for consistency</li>
+                <li><strong>Flexbox</strong> - Centering content vertically and horizontally</li>
+                <li><strong>Gradients</strong> - Creating beautiful background effects</li>
+                <li><strong>Box Model</strong> - Understanding padding, borders, and margins</li>
+                <li><strong>Pseudo-classes</strong> - Using :hover and :focus for interactivity</li>
+                <li><strong>Transitions</strong> - Creating smooth animations</li>
+                <li><strong>Box Shadows</strong> - Adding depth to your designs</li>
+            </ul>
+
+            <div class="next-steps">
+                <h3 style="color: #ffc107; margin-bottom: 15px;">📚 Next Steps to Improve Your Login Page</h3>
+                <ul>
+                    <li>Add a "Forgot Password?" link below the form</li>
+                    <li>Include "Remember Me" checkbox</li>
+                    <li>Add social login buttons (Google, Facebook, etc.)</li>
+                    <li>Implement form validation with JavaScript</li>
+                    <li>Add error messages for invalid inputs</li>
+                    <li>Make it fully responsive for mobile devices</li>
+                    <li>Add loading animation when button is clicked</li>
+                    <li>Create a sign-up page with similar styling</li>
+                </ul>
+            </div>
+
+            <div class="resources">
+                <h3 style="color: #2196F3; margin-bottom: 15px;">🔗 Helpful Resources</h3>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN HTML
+                            Documentation</a> - Complete HTML reference</li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS
+                            Documentation</a> - Complete CSS reference</li>
+                    <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS Flexbox
+                            Guide</a> - Master flexbox layout</li>
+                    <li><a href="https://www.w3schools.com/css/css3_gradients.asp" target="_blank">CSS Gradients
+                            Tutorial</a> - Learn more about gradients</li>
+                    <li><a href="https://cssgradient.io/" target="_blank">CSS Gradient Generator</a> - Create custom
+                        gradients</li>
+                </ul>
+            </div>
+
+            <h2>🎨 Customization Ideas</h2>
+            <p>Try changing these values to customize your login page:</p>
+            <ul>
+                <li><strong>Colors</strong> - Change <code>#667eea</code> and <code>#764ba2</code> to your brand colors
+                </li>
+                <li><strong>Border Radius</strong> - Make corners more or less rounded</li>
+                <li><strong>Box Shadow</strong> - Adjust the shadow size and opacity</li>
+                <li><strong>Font Family</strong> - Use Google Fonts for custom typography</li>
+                <li><strong>Padding/Spacing</strong> - Adjust sizes to your preference</li>
+            </ul>
+
+            <div
+                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; border-radius: 15px; margin: 40px 0; text-align: center; color: white;">
+                <h3 style="margin-bottom: 15px; font-size: 1.8em;">🚀 You're Ready!</h3>
+                <p style="font-size: 1.1em; opacity: 0.95;">You now have the skills to create beautiful, professional
+                    web forms. Keep practicing and building!</p>
+            </div>
+
+            <div class="navigation">
+                <a href="step7.html" class="btn btn-secondary">← Previous Step</a>
+                <a href="index.html" class="btn btn-primary">🏠 Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyCode() {
+            const code = document.getElementById('finalCode').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                const btn = document.querySelector('.copy-btn');
+                btn.textContent = '✅ Copied!';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy Code';
+                }, 2000);
+            });
+        }
+    </script>
+    <footer
+        style="background: #2d2d2d; color: white; padding: 30px; text-align: center; margin-top: 50px; border-radius: 10px;">
+        <p style="margin-bottom: 10px; font-size: 1.1em;">Created by <strong>Zyril Evangelista</strong></p>
+        <p style="opacity: 0.8; margin-bottom: 5px;">Information Management - IT5</p>
+        <p style="opacity: 0.7; font-size: 0.9em;">Basics on HTML & CSS</p>
+    </footer>
+</body>
+
+</html>

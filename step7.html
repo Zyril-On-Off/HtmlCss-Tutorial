@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 7: Button Styling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .tutorial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .explanation,
+        .preview {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .css-property {
+            color: #66d9ef;
+        }
+
+        .css-value {
+            color: #a6e22e;
+        }
+
+        .comment {
+            color: #75715e;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+        }
+
+        .preview-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 8px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-note {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+            color: #555;
+        }
+
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        /* New button styling we're teaching */
+        button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .tutorial-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tutorial-container">
+        <div class="explanation">
+            <span class="step-number">Step 7 of 8</span>
+            <h1>Styling the Login Button</h1>
+
+            <p>The final piece! Let's create a beautiful, interactive button that users will want to click.</p>
+
+            <h2>🎨 Button CSS</h2>
+            <div class="code-block"><span class="css-property">button</span> {
+                <span class="css-property">width</span>: <span class="css-value">100%</span>;
+                <span class="css-property">padding</span>: <span class="css-value">14px</span>;
+                <span class="css-property">background</span>: <span class="css-value">linear-gradient(135deg, #667eea
+                    0%, #764ba2 100%)</span>;
+                <span class="css-property">color</span>: <span class="css-value">white</span>;
+                <span class="css-property">border</span>: <span class="css-value">none</span>;
+                <span class="css-property">border-radius</span>: <span class="css-value">6px</span>;
+                <span class="css-property">font-size</span>: <span class="css-value">16px</span>;
+                <span class="css-property">font-weight</span>: <span class="css-value">bold</span>;
+                <span class="css-property">cursor</span>: <span class="css-value">pointer</span>;
+                <span class="css-property">transition</span>: <span class="css-value">transform 0.3s</span>;
+                }
+
+                <span class="comment">/* Lift button when user hovers */</span>
+                <span class="css-property">button:hover</span> {
+                <span class="css-property">transform</span>: <span class="css-value">translateY(-2px)</span>;
+                }
+            </div>
+
+            <h2>🔍 Property Breakdown</h2>
+            <ul>
+                <li><code>width: 100%</code> - Button takes full width</li>
+                <li><code>padding: 14px</code> - Makes button taller (easier to click)</li>
+                <li><code>background: linear-gradient(...)</code> - Same gradient as the page background</li>
+                <li><code>color: white</code> - White text color</li>
+                <li><code>border: none</code> - Removes default button border</li>
+                <li><code>border-radius: 6px</code> - Rounded corners</li>
+                <li><code>font-size: 16px</code> - Larger text</li>
+                <li><code>font-weight: bold</code> - Makes text bold</li>
+                <li><code>cursor: pointer</code> - Shows hand cursor on hover</li>
+                <li><code>transition: transform 0.3s</code> - Smooth animation</li>
+            </ul>
+
+            <h2>✨ The Hover Effect</h2>
+            <p>The <code>:hover</code> pseudo-class activates when the user moves their mouse over the button:</p>
+            <ul>
+                <li><code>transform: translateY(-2px)</code> - Moves button up 2 pixels</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>💡 Why cursor: pointer?</strong><br>
+                By default, buttons show an arrow cursor. <code>cursor: pointer</code> changes it to a hand pointer,
+                which is the universal symbol for "this is clickable!" It improves user experience.
+            </div>
+
+            <h2>🎯 Transform Property</h2>
+            <p>The <code>transform</code> property lets you move, scale, rotate, or skew elements:</p>
+            <ul>
+                <li><code>translateY(-2px)</code> - Moves element up by 2 pixels (negative Y = up)</li>
+                <li>Combined with <code>transition</code>, this creates a smooth lift effect</li>
+            </ul>
+
+            <div class="navigation">
+                <a href="step6.html" class="btn btn-secondary">← Previous</a>
+                <a href="step8.html" class="btn btn-primary">Finish: Get Code →</a>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>Live Preview</h2>
+            <div class="preview-note">
+                <strong>🎉 Perfect!</strong> Hover over the Login button to see it lift up. This subtle animation makes
+                the interface feel responsive and modern!
+            </div>
+
+            <div class="preview-box">
+                <div class="login-container">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="preview-username">Username</label>
+                            <input type="text" id="preview-username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <label for="preview-password">Password</label>
+                            <input type="password" id="preview-password" placeholder="Enter password">
+                        </div>
+                        <button type="button">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 30px;">CSS Added In This Step</h2>
+            <div class="code-block">button {
+                width: 100%;
+                padding: 14px;
+                background: linear-gradient(
+                135deg,
+                #667eea 0%,
+                #764ba2 100%
+                );
+                color: white;
+                border: none;
+                border-radius: 6px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.3s;
+                }
+
+                button:hover {
+                transform: translateY(-2px);
+                }</div>
+        </div>
+    </div>
+    <footer
+        style="background: #2d2d2d; color: white; padding: 30px; text-align: center; margin-top: 50px; border-radius: 10px;">
+        <p style="margin-bottom: 10px; font-size: 1.1em;">Created by <strong>Zyril Evangelista</strong></p>
+        <p style="opacity: 0.8; margin-bottom: 5px;">Information Management - IT5</p>
+        <p style="opacity: 0.7; font-size: 0.9em;">Basics on HTML & CSS</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: Container Styling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .tutorial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .explanation,
+        .preview {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .step-number {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #667eea;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .code-block {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+            gap: 10px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+
+        .css-property {
+            color: #66d9ef;
+        }
+
+        .css-value {
+            color: #a6e22e;
+        }
+
+        .comment {
+            color: #75715e;
+            font-style: italic;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-top: 10px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #667eea;
+        }
+
+        .preview-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px;
+            border-radius: 8px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .preview-note {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2196F3;
+            color: #555;
+        }
+
+        /* The login container styling we're teaching */
+        .login-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .tutorial-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tutorial-container">
+        <div class="explanation">
+            <span class="step-number">Step 4 of 8</span>
+            <h1>Styling the Login Container</h1>
+
+            <p>Now we'll make the login box beautiful with a white background, rounded corners, and a professional
+                shadow!</p>
+
+            <h2>🎨 The Container CSS</h2>
+            <div class="code-block"><span class="css-property">.login-container</span> {
+                <span class="css-property">background</span>: <span class="css-value">white</span>;
+                <span class="css-property">padding</span>: <span class="css-value">40px</span>;
+                <span class="css-property">border-radius</span>: <span class="css-value">10px</span>;
+                <span class="css-property">box-shadow</span>: <span class="css-value">0 10px 25px rgba(0, 0, 0,
+                    0.2)</span>;
+                <span class="css-property">width</span>: <span class="css-value">100%</span>;
+                <span class="css-property">max-width</span>: <span class="css-value">400px</span>;
+                }
+
+                <span class="css-property">.login-container h2</span> {
+                <span class="css-property">text-align</span>: <span class="css-value">center</span>;
+                <span class="css-property">color</span>: <span class="css-value">#333</span>;
+                <span class="css-property">margin-bottom</span>: <span class="css-value">30px</span>;
+                <span class="css-property">font-size</span>: <span class="css-value">28px</span>;
+                }
+            </div>
+
+            <h2>🔍 What Each Property Does</h2>
+            <ul>
+                <li><code>background: white</code> - Makes the container background white</li>
+                <li><code>padding: 40px</code> - Adds 40px of space inside the container on all sides</li>
+                <li><code>border-radius: 10px</code> - Rounds the corners by 10 pixels</li>
+                <li><code>box-shadow</code> - Creates a shadow below and around the container for depth</li>
+                <li><code>width: 100%</code> - Container takes full width of its parent</li>
+                <li><code>max-width: 400px</code> - But never wider than 400px (keeps it nice and compact)</li>
+            </ul>
+
+            <div class="highlight">
+                <strong>💡 Understanding box-shadow:</strong><br>
+                The syntax is: <code>horizontal vertical blur color</code><br>
+                <code>0 10px 25px rgba(0,0,0,0.2)</code> means:<br>
+                • 0 = no horizontal offset<br>
+                • 10px = shadow is 10px down<br>
+                • 25px = blur radius (makes it soft)<br>
+                • rgba(0,0,0,0.2) = black at 20% opacity
+            </div>
+
+            <h2>🎯 Styling the Heading</h2>
+            <p>We also styled the h2 inside the container:</p>
+            <ul>
+                <li><code>text-align: center</code> - Centers the text</li>
+                <li><code>color: #333</code> - Dark gray color (easier on eyes than pure black)</li>
+                <li><code>margin-bottom: 30px</code> - Adds space below the heading</li>
+                <li><code>font-size: 28px</code> - Makes the heading larger</li>
+            </ul>
+
+            <div class="navigation">
+                <a href="step3.html" class="btn btn-secondary">← Previous</a>
+                <a href="step5.html" class="btn btn-primary">Next: Form Groups →</a>
+            </div>
+        </div>
+
+        <div class="preview">
+            <h2>Live Preview</h2>
+            <div class="preview-note">
+                <strong>🎉 Nice!</strong> Now the login container has a beautiful white box with rounded corners and a
+                shadow. It stands out from the gradient background!
+            </div>
+
+            <div class="preview-box">
+                <div class="login-container">
+                    <h2>Welcome Back</h2>
+                    <form>
+                        <div>
+                            <label for="preview-username">Username</label>
+                            <input type="text" id="preview-username" placeholder="Enter username">
+                        </div>
+                        <div>
+                            <label for="preview-password">Password</label>
+                            <input type="password" id="preview-password" placeholder="Enter password">
+                        </div>
+                        <button type="button">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <h2 style="margin-top: 30px;">Complete CSS So Far</h2>
+            <div class="code-block">&lt;style&gt;
+                * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                }
+
+                body {
+                font-family: 'Arial', sans-serif;
+                background: linear-gradient(
+                135deg,
+                #667eea 0%,
+                #764ba2 100%
+                );
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                }
+
+                .login-container {
+                background: white;
+                padding: 40px;
+                border-radius: 10px;
+                box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+                width: 100%;
+                max-width: 400px;
+                }
+
+                .login-container h2 {
+                text-align: center;
+                color: #333;
+                margin-bottom: 30px;
+                font-size: 28px;
+                }
+                &lt;/style&gt;</div>
+        </div>
+    </div>
+    <footer
+        style="background: #2d2d2d; color: white; padding: 30px; text-align: center; margin-top: 50px; border-radius: 10px;">
+        <p style="margin-bottom: 10px; font-size: 1.1em;">Created by <strong>Zyril Evangelista</strong></p>
+        <p style="opacity: 0.8; margin-bottom: 5px;">Information Management - IT5</p>
+        <p style="opacity: 0.7; font-size: 0.9em;">Basics on HTML & CSS</p>
+    </footer>
+</body>
+
+</html>
